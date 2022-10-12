@@ -35,6 +35,35 @@ switch(l35B8E701_0)
 			draw_sprite(spr_lives, 0, 20 + l71C3EF33_1, 60);
 			l71C3EF33_1 += l71C3EF33_0;
 		}
+	
+		/// @DnDAction : YoYo Games.Instance Variables.If_Score
+		/// @DnDVersion : 1
+		/// @DnDHash : 0D36DC35
+		/// @DnDParent : 52D3882E
+		/// @DnDArgument : "op" "4"
+		/// @DnDArgument : "value" "100"
+		if(!variable_instance_exists(id, "__dnd_score")) __dnd_score = 0;
+		if(__dnd_score >= 100)
+		{
+			/// @DnDAction : YoYo Games.Drawing.Draw_Rectangle
+			/// @DnDVersion : 1
+			/// @DnDHash : 3E2972EC
+			/// @DnDParent : 0D36DC35
+			/// @DnDArgument : "x1" "250"
+			/// @DnDArgument : "y1" "20"
+			/// @DnDArgument : "x2" "850"
+			/// @DnDArgument : "y2" "120"
+			draw_rectangle(250, 20, 850, 120, 1);
+		
+			/// @DnDAction : YoYo Games.Drawing.Draw_Value
+			/// @DnDVersion : 1
+			/// @DnDHash : 770ADB59
+			/// @DnDParent : 0D36DC35
+			/// @DnDArgument : "x" "270"
+			/// @DnDArgument : "y" "40"
+			/// @DnDArgument : "caption" ""Yey, ganaste. Enter para continuar ""
+			draw_text(270, 40, string("Yey, ganaste. Enter para continuar ") + "");
+		}
 		break;
 
 	/// @DnDAction : YoYo Games.Switch.Case

@@ -45,4 +45,27 @@ switch(l2804EDB0_0)
 		/// @DnDParent : 3D3AB38B
 		game_restart();
 		break;
+
+	/// @DnDAction : YoYo Games.Switch.Case
+	/// @DnDVersion : 1
+	/// @DnDHash : 760D9727
+	/// @DnDParent : 2804EDB0
+	/// @DnDArgument : "const" "rm_game"
+	case rm_game:
+		/// @DnDAction : YoYo Games.Instance Variables.If_Score
+		/// @DnDVersion : 1
+		/// @DnDHash : 09B923F4
+		/// @DnDParent : 760D9727
+		/// @DnDArgument : "op" "4"
+		/// @DnDArgument : "value" "100"
+		if(!variable_instance_exists(id, "__dnd_score")) __dnd_score = 0;
+		if(__dnd_score >= 100)
+		{
+			/// @DnDAction : YoYo Games.Rooms.Next_Room
+			/// @DnDVersion : 1
+			/// @DnDHash : 4E730B66
+			/// @DnDParent : 09B923F4
+			room_goto_next();
+		}
+		break;
 }
